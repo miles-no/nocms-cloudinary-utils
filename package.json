@@ -1,0 +1,40 @@
+{
+  "name": "nocms-cloudinary-utils",
+  "version": "0.0.0-development",
+  "description": "Utility functions for cloudinary",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "babel ./src --out-dir ./lib --source-maps",
+    "eslint": "eslint --ext .js .",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miles-no/nocms-cloudinary-utils.git"
+  },
+  "author": "Wenche Tollevsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miles-no/nocms-cloudinary-utils/issues"
+  },
+  "homepage": "https://github.com/miles-no/nocms-cloudinary-utils#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.34",
+    "@babel/core": "^7.0.0-beta.34",
+    "@babel/preset-env": "^7.0.0-beta.34",
+    "babel-eslint": "^8.0.3",
+    "condition-circle": "^1.6.0",
+    "eslint": "^4.12.1",
+    "eslint-config-webteam": "^2.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "semantic-release": "^8.2.0"
+  },
+  "dependencies": {
+    "cloudinary-core": "^2.3.0"
+  },
+  "release": {
+    "verifyConditions": "condition-circle"
+  }
+}
