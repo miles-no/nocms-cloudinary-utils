@@ -47,6 +47,17 @@ const getResponsiveImgBg = (cloudName, transformation, image, aspectRatio) => {
   if (Object.keys(image).length === 0) {
     imgBgUrl = { backgroundImage: 'url(/assets/img/dummy.jpg)' };
   } else if (typeof window !== 'undefined') {
+    const cloudinaryUrl = getImageUrl(cloudName, transformation, image, aspectRatio);
+    imgBgUrl = { backgroundImage: `url(${cloudinaryUrl})` };
+  }
+  return imgBgUrl;
+};
+
+const getImageBg = (cloudName, transformation, image, aspectRatio) => {
+  let imgBgUrl;
+  if (Object.keys(image).length === 0) {
+    imgBgUrl = { backgroundImage: 'url(/assets/img/dummy.jpg)' };
+  } else if (typeof window !== 'undefined') {
     const cloudinaryUrl = responsiveUrl(cloudName, transformation, image, aspectRatio);
     imgBgUrl = { backgroundImage: `url(${cloudinaryUrl})` };
   }
@@ -66,6 +77,7 @@ const getResponsiveImgUrl = (cloudName, transformation, image, aspectRatio) => {
 export default {
   url,
   getImageUrl,
+  getImageBg,
   getImageOptions,
   getResponsiveImgBg,
   getResponsiveImgUrl,
