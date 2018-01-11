@@ -14,8 +14,6 @@ const getImageOptions = (transformation, imageOptions, aspectRatio) => {
   return Object.assign({}, transformation, {
     x: imageOptions.x,
     y: imageOptions.y,
-    radius: imageOptions.radius,
-    gravity: imageOptions.gravity,
     width: imageOptions.width,
     aspect_ratio: `${aspectRatio.width}:${aspectRatio.height}`,
   });
@@ -58,7 +56,7 @@ const getImageBg = (cloudName, transformation, image, aspectRatio) => {
   if (Object.keys(image).length === 0) {
     imgBgUrl = { backgroundImage: 'url(/assets/img/dummy.jpg)' };
   } else if (typeof window !== 'undefined') {
-    const cloudinaryUrl = responsiveUrl(cloudName, transformation, image, aspectRatio);
+    const cloudinaryUrl = getImageUrl(cloudName, transformation, image, aspectRatio);
     imgBgUrl = { backgroundImage: `url(${cloudinaryUrl})` };
   }
   return imgBgUrl;
