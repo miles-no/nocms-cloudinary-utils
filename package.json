@@ -4,7 +4,7 @@
   "description": "Utility functions for cloudinary",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "prepare": "babel ./src --out-dir ./lib --source-maps",
     "eslint": "eslint --ext .js .",
     "nsp": "nsp check"
