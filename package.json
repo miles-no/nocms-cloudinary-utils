@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "babel ./src --out-dir ./lib --source-maps",
     "eslint": "eslint --ext .js .",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "nsp": "nsp check"
   },
   "repository": {
     "type": "git",
@@ -20,21 +20,18 @@
   },
   "homepage": "https://github.com/miles-no/nocms-cloudinary-utils#readme",
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.34",
-    "@babel/core": "^7.0.0-beta.34",
-    "@babel/preset-env": "^7.0.0-beta.34",
-    "babel-eslint": "^8.0.3",
-    "condition-circle": "1.5.0",
-    "eslint": "^4.12.1",
-    "eslint-config-webteam": "^2.0.0",
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-webteam": "^2.1.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "semantic-release": "^8.2.0"
+    "eslint-plugin-import": "^2.12.0",
+    "nsp": "^3.2.1",
+    "semantic-release": "^15.5.1"
   },
   "dependencies": {
-    "cloudinary-core": "^2.3.0"
-  },
-  "release": {
-    "verifyConditions": "condition-circle"
+    "cloudinary-core": "^2.5.0"
   }
 }
